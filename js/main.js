@@ -1,3 +1,5 @@
+/* eslint-disable no-template-curly-in-string */
+/* eslint-disable no-unused-vars */
 function checkStringLength(string, length) {
   return string.length <= length;
 }
@@ -30,8 +32,8 @@ function getRandomPositiveInteger(firstNumber, secondNumber) {
   // потому что Math.random() генерирует только дробные числа и ноль.
   return Math.floor(result);
 }
-checkStringLength();
-getRandomPositiveInteger();
+checkStringLength(0, 10);
+getRandomPositiveInteger('Дмитрий', 5);
 
 const NAMES = [
   'Дмитрий',
@@ -87,20 +89,20 @@ const MAX_NUMBER_IN_AVATAR_NAME = 6;
 const MIN_LIKES_COUNT = 15;
 const MAX_LIKES_COUNT = 200;
 
-const getRandomArrayElement = (elements) => elements[getRandomInt(0, elements.length - 1)];
+const getRandomArrayElement = (elements) => elements[getRandomPositiveInteger(0, elements.length - 1)];
 
 /**
  * Получение случайного сообщения из нескольких элеиментов массива MESSAGES
  */
 const getRandomMessage = () => {
-  const sentenceCount = getRandomInt(MIN_MESSAGES_COUNT, MAX_MESSAGES_COUNT);
+  const sentenceCount = getRandomPositiveInteger(MIN_MESSAGES_COUNT, MAX_MESSAGES_COUNT);
 
   return Array(sentenceCount).fill().map(() => getRandomArrayElement(MESSAGES)).join(' ');
 };
 
 const createRandomComment = (id) => ({
   id: id,
-  avatar: `img/avatar-${getRandomInt(MIN_NUMBER_IN_AVATAR_NAME, MAX_NUMBER_IN_AVATAR_NAME)}.svg`,
+  avatar: 'img/avatar-${getRandomPositiveInteger(MIN_NUMBER_IN_AVATAR_NAME, MAX_NUMBER_IN_AVATAR_NAME)}.svg',
   message: getRandomMessage(),
   name: getRandomArrayElement(NAMES),
 });
@@ -113,7 +115,7 @@ const createRandomComment = (id) => ({
 const createRandomComments = () => {
   const randomCommentsCountsPerItem = new Array(PHOTO_COUNT)
     .fill()
-    .map(() => getRandomInt(MIN_COMMENTS_COUNT, MAX_COMMENTS_COUNT));
+    .map(() => getRandomPositiveInteger(MIN_COMMENTS_COUNT, MAX_COMMENTS_COUNT));
   const totalCommentsCount = randomCommentsCountsPerItem.reduce(
     (accumulator, currentValue) => accumulator + currentValue,
   );
@@ -129,7 +131,7 @@ const createRandomComments = () => {
 
     // eslint-disable-next-line id-length
     for (let i = 1; i <= commentsCount && orderedIds.length; i++) {
-      randomIndex = getRandomInt(0, orderedIds.length - 1);
+      randomIndex = getRandomPositiveInteger(0, orderedIds.length - 1);
       comments[index].push(createRandomComment(orderedIds[randomIndex]));
       orderedIds.splice(randomIndex, 1);
     }
@@ -142,9 +144,9 @@ const randomPhotoComments = createRandomComments();
 
 const createPhotoDescription = (id) => ({
   id: id,
-  url: `photos/${id}.jpg`,
+  url: 'photos/${id}.jpg',
   description: getRandomArrayElement(DESCRIPTIONS),
-  likes: getRandomInt(MIN_LIKES_COUNT, MAX_LIKES_COUNT),
+  likes: getRandomPositiveInteger(MIN_LIKES_COUNT, MAX_LIKES_COUNT),
   comments: randomPhotoComments[id - 1],
 });
 
