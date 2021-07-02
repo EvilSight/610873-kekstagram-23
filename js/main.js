@@ -82,12 +82,12 @@ const MIN_COMMENTS_COUNT = 0;
 const MAX_COMMENTS_COUNT = 3;
 const MIN_MESSAGES_COUNT = 1;
 const MAX_MESSAGES_COUNT = 2;
-const MIN_NUMBER_IN_AVATAR_NAME= 1;
+const MIN_NUMBER_IN_AVATAR_NAME = 1;
 const MAX_NUMBER_IN_AVATAR_NAME = 6;
 const MIN_LIKES_COUNT = 15;
 const MAX_LIKES_COUNT = 200;
 
-const getRandomArrayElement = (elements) => elements[getRandomInt(0, elements.length -1)];
+const getRandomArrayElement = (elements) => elements[getRandomInt(0, elements.length - 1)];
 
 /**
  * Получение случайного сообщения из нескольких элеиментов массива MESSAGES
@@ -103,14 +103,14 @@ const createRandomComment = (id) => ({
   avatar: `img/avatar-${getRandomInt(MIN_NUMBER_IN_AVATAR_NAME, MAX_NUMBER_IN_AVATAR_NAME)}.svg`,
   message: getRandomMessage(),
   name: getRandomArrayElement(NAMES),
-})
+});
 
 /**
  * Генерация массива массивов с объектами - комментариями,
  * где id сообщения - уникальное случайное число от 1 до кол-ва сгенерированных комментариев
  */
 
- const createRandomComments = () => {
+const createRandomComments = () => {
   const randomCommentsCountsPerItem = new Array(PHOTO_COUNT)
     .fill()
     .map(() => getRandomInt(MIN_COMMENTS_COUNT, MAX_COMMENTS_COUNT));
@@ -123,13 +123,13 @@ const createRandomComment = (id) => ({
     .map((_element, index) => index + 1);
 
   let randomIndex;
-  const comments = new Array(PHOTO_COUNT).fill().map(()=>[]);
+  const comments = new Array(PHOTO_COUNT).fill().map(() => []);
 
   randomCommentsCountsPerItem.forEach((commentsCount, index) => {
 
     // eslint-disable-next-line id-length
-    for(let i = 1; i<=commentsCount && orderedIds.length; i++){
-      randomIndex = getRandomInt(0,orderedIds.length - 1);
+    for (let i = 1; i <= commentsCount && orderedIds.length; i++) {
+      randomIndex = getRandomInt(0, orderedIds.length - 1);
       comments[index].push(createRandomComment(orderedIds[randomIndex]));
       orderedIds.splice(randomIndex, 1);
     }
@@ -144,9 +144,9 @@ const createPhotoDescription = (id) => ({
   id: id,
   url: `photos/${id}.jpg`,
   description: getRandomArrayElement(DESCRIPTIONS),
-  likes: getRandomInt(MIN_LIKES_COUNT,MAX_LIKES_COUNT),
+  likes: getRandomInt(MIN_LIKES_COUNT, MAX_LIKES_COUNT),
   comments: randomPhotoComments[id - 1],
 });
 
 // eslint-disable-next-line no-unused-vars
-const photoGallery = new Array(PHOTO_COUNT).fill().map((_element, index)=>createPhotoDescription(index + MIN_PHOTO_DESCRIPTION_ID));
+const photoGallery = new Array(PHOTO_COUNT).fill().map((_element, index) => createPhotoDescription(index + MIN_PHOTO_DESCRIPTION_ID));
