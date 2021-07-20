@@ -1,0 +1,106 @@
+[33mcommit 880c732691d1d3f5219e8b0129447df9e36f2a10[m[33m ([m[1;36mHEAD -> [m[1;32mmodule7-task2[m[33m)[m
+Author: Chibisov Dmitriy <demonzgrad@mail.ru>
+Date:   Wed Jul 21 00:32:52 2021 +0300
+
+    Добавляет 1.Смену названий файлов .js; 2.Отрисовку изображений fullsize; 3.Закрытие фото по кнопке или клавише;
+
+[33mcommit e48b68b2259f0c8e163ee17b65d545d841810059[m[33m ([m[1;31morigin/master[m[33m, [m[1;31morigin/HEAD[m[33m, [m[1;31macademy/master[m[33m, [m[1;32mmaster[m[33m)[m
+Merge: b064bd1 0263321
+Author: Keks <keksobot@users.noreply.github.com>
+Date:   Tue Jul 20 22:43:44 2021 +0300
+
+    Merge pull request #5 from EvilSight/module7-task1
+
+[33mcommit 0263321fc8e111d6a2ae9241510924e4031dfc0a[m[33m ([m[1;31morigin/module7-task1[m[33m, [m[1;32mmodule7-task1[m[33m)[m
+Author: Chibisov Dmitriy <demonzgrad@mail.ru>
+Date:   Tue Jul 20 22:03:07 2021 +0300
+
+    Добавляет отображение фотографий других пользователей
+
+[33mcommit b064bd158f7dd1fdae5b6c49cfb93bbae04df05e[m
+Merge: 3e64aae 1f54d0f
+Author: Keks <keksobot@users.noreply.github.com>
+Date:   Sun Jul 11 12:20:36 2021 +0300
+
+    Merge pull request #4 from EvilSight/module5-task1
+
+[33mcommit 1f54d0ff4b6e08106006518f3dbaadd8f75bf546[m[33m ([m[1;31morigin/module5-task1[m[33m, [m[1;32mmodule5-task1[m[33m)[m
+Author: Chibisov Dmitriy <demonzgrad@mail.ru>
+Date:   Sun Jul 11 02:33:35 2021 +0300
+
+    Добавляет Модуляция
+
+[33mcommit 3e64aae4eeb202c23865d3bf1950f84012254fa4[m
+Merge: 4392622 497f3f6
+Author: Keks <keksobot@users.noreply.github.com>
+Date:   Sat Jul 3 11:33:49 2021 +0300
+
+    Merge pull request #3 from EvilSight/module4-task1
+
+[33mcommit 497f3f6d63657d8eced3b1fa75564eb0eacce9cb[m[33m ([m[1;31morigin/module4-task1[m[33m, [m[1;32mmodule4-task1[m[33m)[m
+Author: Chibisov Dmitriy <demonzgrad@mail.ru>
+Date:   Sat Jul 3 00:26:55 2021 +0300
+
+    fix2
+
+[33mcommit bbcb2657d0f720f00ccdb37659af7fc75c4a3cc9[m
+Author: Chibisov Dmitriy <demonzgrad@mail.ru>
+Date:   Sat Jul 3 00:21:55 2021 +0300
+
+    fix
+
+[33mcommit e7b83c4151d625830aecf56a729562f84973435b[m
+Author: Chibisov Dmitriy <demonzgrad@mail.ru>
+Date:   Sat Jul 3 00:19:48 2021 +0300
+
+    Добавляет Генерации
+
+[33mcommit 4392622fbb66897605a528bae1a22ad171111a29[m
+Author: Keks <keks@htmlacademy.ru>
+Date:   Fri Jul 2 00:51:17 2021 +0300
+
+    :package:
+
+[33mcommit 2653adfecf13d9aaa355a09038ea99dd4ff183cc[m
+Merge: aa0bf6c 16ae747
+Author: Keks <keksobot@users.noreply.github.com>
+Date:   Sat Jun 12 14:55:23 2021 +0300
+
+    Merge pull request #2 from EvilSight/module2-task1
+
+[33mcommit 16ae747e4d4f40c44490fecba1040ffc068af549[m[33m ([m[1;31morigin/module2-task1[m[33m, [m[1;32mmodule2-task1[m[33m)[m
+Author: Chibisov Dmitriy <demonzgrad@mail.ru>
+Date:   Sat Jun 12 00:16:19 2021 +0300
+
+    Добавляет решение конфликта
+
+[33mcommit 9e00d63400a21d54ba5d863fc8ce6cb21e3c9e2d[m
+Author: Chibisov Dmitriy <demonzgrad@mail.ru>
+Date:   Sat Jun 12 00:08:34 2021 +0300
+
+    Добавляет решение Модуль2-таск1
+
+[33mcommit aa0bf6c55600a6db17b45bdeda169b6d16880e53[m
+Author: Keks <keks@htmlacademy.ru>
+Date:   Fri Jun 11 23:43:12 2021 +0300
+
+    :package:
+
+[33mcommit e22613ffd14e7ea3a00cf2a6998f2d3e76bce67e[m
+Merge: 9caff7b 504f8e2
+Author: Keks <keksobot@users.noreply.github.com>
+Date:   Fri Jun 4 11:26:08 2021 +0300
+
+    Merge pull request #1 from EvilSight/module1-task1
+
+[33mcommit 504f8e277b4fad6def5c8f36d19836a5ec3edf71[m[33m ([m[1;31morigin/module1-task1[m[33m, [m[1;32mmodule1-task1[m[33m)[m
+Author: Chibisov Dmitriy <demonzgrad@mail.ru>
+Date:   Fri Jun 4 11:09:18 2021 +0300
+
+    Добавляет Наставника
+
+[33mcommit 9caff7b92b61d14d5368ad4078833e76726a0e58[m
+Author: Keks <keks@htmlacademy.ru>
+Date:   Wed May 26 23:03:08 2021 +0300
+
+    :hatching_chick:
