@@ -1,22 +1,27 @@
 import { renderPictures } from './thumbnails-viewer.js';
-import {showPhoto} from './photo-viewer.js';
-import { createPhotoDescriptionList } from './data.js';
+import { showPhoto } from './photo-viewer.js';
 
-const getShowPhotoСlosure = (photoDescription) => () => showPhoto(photoDescription);
+const picturesElement = document.querySelector('.pictures');
 
-const addThumbnailClickHandler = (thumbnail, photoDescription) => {
-  thumbnail.addEventListener('click', getShowPhotoСlosure(photoDescription));
-};
+const createPhotoGallery = (photoDescriptionList) => {
 
-const createPhotoGallery = (createPhotoDescriptionList) => {
-  if (photoDescriptionList && photoDescriptionList.length > 0) {
+  if (picturesElement && photoDescriptionList && photoDescriptionList.length > 0) {
+
     renderPictures(photoDescriptionList);
 
-    const thumbnails = document.querySelectorAll('.picture__img');
-    for (let i = 0; i < thumbnails.length; i++) {
-      addThumbnailClickHandler(thumbnails[i], photoDescriptionList[i]);
-    }
+    const pictureImgElements = picturesElement.querySelectorAll('.picture__img');
+    const thumbnails = pictureImgElements ? Array.from(pictureImgElements) : [];
+
+    picturesElement.onclick = (evt) => {
+      const target = evt.target;
+      if (target.className === 'picture__img') {
+
+        const photoDescription = photoDescriptionList[thumbnails.indexOf(target)];
+
+        photoDescription && showPhoto(photoDescription);
+      }
+    };
   }
 };
 
-export {createPhotoGallery};
+export { createPhotoGallery };
